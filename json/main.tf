@@ -3,5 +3,5 @@ data "http" "my_ip" {
 }
 
 output "ip" {
-	value = jsondecode( data.http.my_ip.body )
+	value = jsondecode( data.http.my_ip.body ).ip
 }
